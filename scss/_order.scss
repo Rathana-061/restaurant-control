@@ -1,9 +1,45 @@
 body {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('/img/bg\ order.png');
+    // background-image: url('/img/bg\ order.png');
     background-size: cover;
     background-position: center;
     height: auto;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-content: center;
+    .sp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            color: #9b1919;
+        }
+        .hp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            li {
+                display: flex;
+                // text-decoration: none;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: #9b1919;
+                }
+            }
+             img {
+                width: 30px;
+                color: #9b1919;
+            }
+        }
+    }
 }
