@@ -1,4 +1,14 @@
-button {
-    padding: 12px 24px;
-    background-color: red;
+$btn-width: xxs,xs,sm, md, lg;
+$default-padding: 8px;
+
+@each $width in $btn-width {
+    .btn-#{$width} {
+        padding: $default-padding($default-padding *2);
+        background: teal;
+        color: white;
+        border: 0;
+        border-radius:($default-padding *2);
+        font-size: $default-padding;
+    }
+    $default-padding: $default-padding+4;
 }
