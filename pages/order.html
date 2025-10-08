@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiteRush</title>
     <link rel="stylesheet" href="/dist/css/index.min.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a style="color: green;" href="#">Home</a></li>
+                <li><a href="/province.html">Province</a></li>
+                <li><a href="/product.html">Product</a></li>
+                <li><a href="/Vegetables.html">Vegetables</a></li>
+                <li><a href="/fruits.html">Fruits</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <!-- More button -->
+                <li>
+                    <a href="javascript:void(0)" onclick="toggleDropdown()">More ▼</a>
+                    <div class="dropdown" id="moreDropdown">
+                        <a href="/province.html">Province</a>
+                        <a href="/product.html">Product</a>
+                        <a href="/Vegetables.html">Vegetables</a>
+                        <a href="/fruits.html">Fruits</a>
+                        <a href="/contact.html">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </body>
+
 </html>
