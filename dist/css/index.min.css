@@ -1,2 +1,41 @@
-.btn-xxs{padding:8px 16px;background:teal;color:white;border:0;border-radius:16px;font-size:8px}.btn-xs{padding:12px 24px;background:teal;color:white;border:0;border-radius:24px;font-size:12px}.btn-sm{padding:16px 32px;background:teal;color:white;border:0;border-radius:32px;font-size:16px}.btn-md{padding:20px 40px;background:teal;color:white;border:0;border-radius:40px;font-size:20px}.btn-lg{padding:24px 48px;background:teal;color:white;border:0;border-radius:48px;font-size:24px}
+.btn-xxs {
+  padding: 8px 16px;
+  background: teal;
+  color: white;
+  border: 0;
+  border-radius: 16px;
+  font-size: 8px;
+}
+.btn-xs {
+  padding: 12px 24px;
+  background: teal;
+  color: white;
+  border: 0;
+  border-radius: 24px;
+  font-size: 12px;
+}
+.btn-sm {
+  padding: 16px 32px;
+  background: teal;
+  color: white;
+  border: 0;
+  border-radius: 32px;
+  font-size: 16px;
+}
+.btn-md {
+  padding: 20px 40px;
+  background: teal;
+  color: white;
+  border: 0;
+  border-radius: 40px;
+  font-size: 20px;
+}
+.btn-lg {
+  padding: 24px 48px;
+  background: teal;
+  color: white;
+  border: 0;
+  border-radius: 48px;
+  font-size: 24px;
+}
 /*# sourceMappingURL=index.min.css.map */
