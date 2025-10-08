@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .btn-xxs {
   padding: 8px 16px;
   background: teal;
@@ -39,3 +40,6 @@
   font-size: 24px;
 }
 /*# sourceMappingURL=index.min.css.map */
+=======
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;background-size:cover;background-position:center;height:auto;background-repeat:no-repeat;margin:0;padding:0}main{display:flex;align-content:center}main .sp{display:flex;flex-direction:column;align-items:center}main .sp p{color:#9b1919}main .sp .hp{display:flex;align-items:center;gap:10px}main .sp .hp li{display:flex;list-style:none}main .sp .hp li a{text-decoration:none;color:#9b1919}main .sp .hp img{width:30px;color:#9b1919}/*# sourceMappingURL=index.min.css.map */
+>>>>>>> order
