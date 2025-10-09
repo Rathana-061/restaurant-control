@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
+<style>
+    .footer {
+        width: 100%;
+        height: auto;
+        background: rgb(155, 25, 25);
+    }
+
+    .quick_link ul li {
+        text-decoration: none;
+
+    }
+
+    .quick_link li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .more_info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1em;
+    }
+
+    .link_info {
+        display: flex;
+        flex-direction: column;
+       
+
+    }
+
+    .location iframe {
+        width: 70%;
+        height: 90%;
+        border-radius: 12px;
+    }
+    .subcribe{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 1em;
+    }
+    .infos_link{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .thanks_text{
+        border: 0.5px solid white;
+        width: 90%;
+        border-radius: 8px;
+    }
+    .thanks_text p{
+        text-align: center;
+    }
+    .text_brand .below{
+        border-top: 0.5px solid white;
+        width: 60%;
+    }
+    hr{
+    border-bottom: 1px solid #ffffff5c;
+    }
+    .subcribe_input{
+       width: 70%;
+    }
+</style>
+
 <body>
-    <h1>Hellow</h1>
+    <footer class="footer">
+        <div class="subcribe">
+            <div class="sub_text">
+                <h1>Subcribe</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, eum?</p>
+            </div>
+            <div class="sub_input">
+                <input type="text" name="" id="subcribe_input">
+                <i class='fas fa-play'></i>
+            </div>
+        </div>
+        <hr>
+        <div class="more_info">
+            <div class="brand_name">
+                <div class="brand_name text">
+                    <!-- <div class="img_brand">
+                        <img src="" alt="">
+                    </div> -->
+                    <div class="text_brand">
+                        <div class="above">
+                            <h3>RSSLVP</h3>
+                            <p>Quick Bites, Big Smiles.</p>
+                        </div>
+                        <div class="below">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, nobis.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="link_info">
+                <div class="infos_link">
+                    <div class="social_media">
+                        <p>Social Media:</p>
+                        <div class="fb">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="ig">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="x">
+                            <i class="fab fa-x-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="quick_link">
+                        <p>Quick link:</p>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Order</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Reserve</a></li>
+                            <li><a href="#">More</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact">
+                        <div class="phone">
+                            <p>Call:</p>
+                            <span>+855 234 77</span>
+                        </div>
+                        <div class="email">
+                            <p>Email:</p>
+                            <span>rsslvp@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="thanks_text">
+                    <p>Thank you for come to our restaurant.</p>
+                </div>
+            </div>
+            <div class="location">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2779928365226!2d-0.07852422387245249!3d51.50811571065175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760349331f38dd%3A0xa8bf49dde1d56467!2sTower%20of%20London!5e0!3m2!1sen!2skh!4v1759925961278!5m2!1sen!2skh"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
