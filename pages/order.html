@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiteRush</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="/dist/css/index.min.css">
 
+=======
+    <link rel="stylesheet" href="/style/order.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+>>>>>>> main
     <style>
         header {
             width: 100%;
@@ -92,14 +99,274 @@
             </div>
         </div>
     </main>
+    <input type="text" id="searchInput" placeholder="Search products...">
     <div class="pro">
         <div class="pro-left">
-            <p>Shop</p>
-            <p>Showing 1–8 of 10 results</p>
+            <p class="pro-left-top">Shop</p>
+            <p class="pro-left-btm">Showing 1–8 of 10 results</p>
         </div>
         <div class="pro-right">
-
+            <a href=""><i class="ri-layout-grid-fill"></i></a>
+            <a style="margin-right: 10px;" href=""><i class="ri-grid-fill"></i></a>
+            <div class="filter-bar">
+                <select id="categoryFilter">
+                    <option class="va" value="all">All Categories</option>
+                    <option value="8Products">8 Products</option>
+                    <option value="16Products">16 Products</option>
+                    <option value="32Products">32 Products</option>
+                    <option value="48Products">48 Products</option>
+                    <option value="64Products">64 Products</option>
+                    <option value="128Products">128 Products</option>
+                </select>
+                <select id="sortSelect">
+                    <option value="default">Default</option>
+                    <option value="popular">Popular</option>
+                    <option value="featured">Featured</option>
+                    <option value="top-rate">Top Rated</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="short-by-latest">Short By Latest</option>
+                    <option value="short-by-oldest">Short By oldest</option>
+                    <option value="priceAsc">Price Low → High</option>
+                    <option value="priceDesc">Price High → Low</option>
+                    <option value="discount high">Highest Discount</option>
+                    <option value="discount low">Lowest Discount</option>
+                    <option value="nameAsc">Alphabetically A → Z</option>
+                    <option value="nameDesc">Alphabetically Z → A</option>
+                </select>
+            </div>
         </div>
+    </div>
+    <div id="productContainer" class="products-grid">
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">32%</div>
+            <img src="/img/asain pasta.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>ASIAN CUISINE PASTA</h3>
+                <p>PASTA</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/pizz.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CHEESE & TOMATO</h3>
+                <p>PIZZA</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$17</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+
+<!--tver tor -->
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <div class="badge">Sale!</div>
+            <div class="discount">18%</div>
+            <img src="/img/classic berger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>CLASSIC BURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+        <div class="card">
+            <img src="/img/duble burger.png"
+                alt="Asian Cuisine Pasta">
+            <div class="card-content">
+                <h3>DOUBLE CHEESEBURGER</h3>
+                <p>BURGER</p>
+                <div class="price">
+                    <span class="old-price">$19</span>
+                    <span class="new-price">$13</span>
+                </div>
+            </div>
+            <a href="#" class="add-cart">🛒 Add to cart</a>
+        </div>
+
+        <!-- list product -->
+
+
     </div>
     <script src="/js/order.js"></script>
 </body>
