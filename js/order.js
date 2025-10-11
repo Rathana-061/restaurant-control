@@ -93,3 +93,68 @@ if (searchInput) {
     });
   });
 }
+
+
+// ===== Pagination with styled buttons =====
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll('.card');
+  const pagination = document.querySelector(".pagination");
+
+  const itemsPerPage = 8; // show 8 products per page
+  const totalPages = Math.ceil(cards.length / itemsPerPage);
+  let currentPage = 1;
+
+  // Function to show cards by page
+  function showPage(page) {
+    cards.forEach(card => (card.style.display = 'none'));
+
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    for (let i = start; i < end && i < cards.length; i++) {
+      cards[i].style.display = 'block';
+    }
+  }
+
+  // Function to render pagination UI
+  function renderPagination() {
+    pagination.innerHTML = ""; // clear old buttons
+
+    // Create numbered buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i;
+      btn.classList.add("page-btn");
+      if (i === currentPage) btn.classList.add("active");
+
+      btn.addEventListener("click", () => {
+        currentPage = i;
+        showPage(currentPage);
+        renderPagination();
+      });
+
+      pagination.appendChild(btn);
+    }
+
+    // Add arrow button →
+    const next = document.createElement("button");
+    next.innerHTML = "→";
+    next.classList.add("page-btn");
+
+    next.addEventListener("click", () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+        renderPagination();
+      }
+    });
+
+    pagination.appendChild(next);
+  }
+
+  // Initialize
+  showPage(currentPage);
+  renderPagination();
+});
+
+
+
