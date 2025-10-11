@@ -1,0 +1,274 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url('/img/bg order.png'); */
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5de;
+}
+
+        header {
+            width: 100%;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background: #333;
+        }
+
+        .menu ul li {
+            position: relative;
+        }
+
+        .menu ul li a {
+            display: block;
+            padding: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu ul li a:hover {
+            background: #444;
+        }
+
+        /* Dropdown menu */
+        .dropdown {
+            display: none;
+            /* hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #333;
+            min-width: 150px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .dropdown a {
+            padding: 0.8rem 1rem;
+        }
+
+        .dropdown a:hover {
+            background: #444;
+        }
+
+main {
+    display: flex;
+    align-content: center;
+}
+
+main .sp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 30px; */
+}
+
+main .sp .p {
+    color: #9b1919;
+    padding: 20px;
+    border-bottom: 1px solid #9b191941;
+    font-size: 32px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+main .sp .hp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+main .sp .hp p {
+    color: #9b1919;
+}
+
+main .sp .hp li {
+    display: flex;
+    list-style: none;
+}
+
+main .sp .hp li a {
+    text-decoration: none;
+    color: #9b1919;
+}
+
+main .sp .hp img {
+    width: 30px;
+    color: #9b1919;
+}
+
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fdf7ed;
+  margin: 0;
+  color: #3b2b2b;
+}
+
+.cart-header {
+  text-align: center;
+  padding: 30px 0;
+  background: #fff8f0;
+}
+
+.cart-header h1 {
+  color: #9b2020;
+  margin-bottom: 5px;
+}
+
+.cart-header a {
+  text-decoration: none;
+  color: #9b2020;
+}
+
+.cart-steps {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #bca595;
+}
+
+.cart-steps span {
+  margin: 0 10px;
+}
+
+.cart-steps .active {
+  color: #9b2020;
+  font-weight: bold;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+.cart-table-section {
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.cart-table th, .cart-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e0d2c3;
+  text-align: center;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.product-cell img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+}
+
+.qty {
+  border: 1px solid #cbb59d;
+  background: #fef9f3;
+  padding: 3px 8px;
+  margin: 0 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.coupon input {
+  padding: 8px;
+  border: 1px solid #c8a88a;
+  border-radius: 4px;
+}
+
+.coupon button, #continueShopping, #checkoutBtn {
+  background: #9b2020;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.coupon button:hover, #continueShopping:hover, #checkoutBtn:hover {
+  background: #c53232;
+}
+
+.cart-sidebar {
+  background: #fff8f0;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.cart-sidebar h2 {
+  background: #9b2020;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.totals p {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.free-ship {
+  background: #f9eee0;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.progress {
+  background: #f2d7c4;
+  height: 6px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#progressFill {
+  background: #9b2020;
+  height: 100%;
+  width: 0%;
+}

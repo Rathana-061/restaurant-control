@@ -310,7 +310,9 @@ main .sp .hp img {
 }
 
 .add-cart:hover {
-    background-color: #7c0f0f;
+    background-color: white;
+    color: #a31616;
+    border: 1px solid #a31616;
 }
 
 
@@ -415,11 +417,13 @@ main .sp .hp img {
     position: relative;
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .wishlist-text {
     position: absolute;
-    bottom: 30px; /* show below the heart button */
+    bottom: 30px;
+    /* show below the heart button */
     left: 50%;
     transform: translateX(-50%);
     padding: 5px 10px;
@@ -429,10 +433,10 @@ main .sp .hp img {
     transition: opacity 0.3s;
     white-space: nowrap;
     font-size: 12px;
-
+    margin: 5px;
 }
 
-.heart-btn:hover + .wishlist-text {
+.heart-btn:hover+.wishlist-text {
     opacity: 1;
 }
 
@@ -442,15 +446,3 @@ main .sp .hp img {
     color: #fff;
     border-color: #c62828;
 }
-
-
-
-
-
-
-
-
-
-
-
-

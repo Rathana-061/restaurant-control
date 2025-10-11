@@ -157,4 +157,75 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ======= ADD TO CART =======
+document.addEventListener("DOMContentLoaded", () => {
+  const addCartButtons = document.querySelectorAll(".add-cart");
+
+  addCartButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const card = button.closest(".card");
+      const name = card.querySelector("h3").textContent;
+      const price = card.querySelector(".new-price").textContent;
+      const image = card.querySelector("img").src;
+
+      const product = { name, price, image };
+
+      // Save to localStorage
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Show success alert
+      alert("✅ Added successfully!");
+
+      // Redirect to cart page
+      window.location.href = "cart.html";
+    });
+  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const addCartButtons = document.querySelectorAll(".add-cart");
+
+  addCartButtons.forEach(button => {
+    button.addEventListener("click", event => {
+      event.preventDefault();
+
+      const card = button.closest(".card");
+      const name = card.querySelector("h3").textContent;
+      const price = card.querySelector(".new-price").textContent.replace('$', '');
+      const image = card.querySelector("img").src;
+
+      // Create product object
+      const product = { name, price, image, quantity: 1 };
+
+      // Get existing cart from localStorage
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Check if product already exists
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push(product);
+      }
+
+      // Save back to localStorage
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Alert success
+      alert("✅ Added successfully!");
+
+      // Redirect to cart page
+      window.location.href = "cart.html";
+    });
+  });
+});
+
+
+
 
