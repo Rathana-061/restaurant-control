@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cartBody.innerHTML = `
         <tr>
           <td colspan="5" style="text-align:center; padding:20px;">
-            🛒 Your cart is empty. <a href="/order.html" style="color:green;">Go shop now!</a>
+            🛒 Your cart is empty. <a href="order.html" style="color:green;">Go shop now!</a>
           </td>
         </tr>`;
             subtotalEl.textContent = "0.00";
