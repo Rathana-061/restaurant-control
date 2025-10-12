@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/style/cart.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a style="color: green;" href="#">Home</a></li>
+                <li><a href="/province.html">Province</a></li>
+                <li><a href="/product.html">Product</a></li>
+                <li><a href="/Vegetables.html">Vegetables</a></li>
+                <li><a href="/fruits.html">Fruits</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <!-- More button -->
+                <li>
+                    <a href="javascript:void(0)" onclick="toggleDropdown()">More ▼</a>
+                    <div class="dropdown" id="moreDropdown">
+                        <a href="/province.html">Province</a>
+                        <a href="/product.html">Product</a>
+                        <a href="/Vegetables.html">Vegetables</a>
+                        <a href="/fruits.html">Fruits</a>
+                        <a href="/contact.html">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sp">
+            <p class="p">SHOP</p>
+            <div class="hp">
+                <li><a href="/index.html">HOME</a></li>
+                <img src="/img/piza icon.png" alt="">
+                <p>Product</p>
+            </div>
+        </div>
+    </main>
+    <section class="cart-steps">
+        <span class="active">1 Shopping cart</span>
+        <span>2 Checkout details</span>
+        <span>3 Order complete</span>
+    </section>
+
+    <main class="cart-layout">
+        <!-- Cart Table -->
+        <section class="cart-table-section">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cartBody"></tbody>
+            </table>
+
+            <div class="cart-actions">
+                <div class="coupon">
+                    <input type="text" placeholder="Coupon code" id="couponCode">
+                    <button id="applyCoupon">Apply coupon</button>
+                </div>
+                <button id="continueShopping">Continue shopping</button>
+            </div>
+        </section>
+
+        <!-- Cart Sidebar -->
+        <aside class="cart-sidebar">
+            <div class="totals">
+                <h2>CART TOTALS</h2>
+                <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                <p>Total: $<span id="total">0.00</span></p>
+                <div class="free-ship">
+                    <p>🛒 Add <span id="freeShip">1000</span> more to get free shipping!</p>
+                    <div class="progress">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
+                <button id="checkoutBtn">Proceed to checkout</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="/js/cart.js"></script>
+</body>
+
+</html>
