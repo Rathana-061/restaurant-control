@@ -4,24 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .footer {
         width: 100%;
         height: auto;
-        background: rgb(155, 25, 25);
+        background-color: #0f0f0f;
+        color: white;
+        padding-bottom: 24px;
+        font-family: 'Poppins', sans-serif;
     }
 
     .quick_link ul li {
-        text-decoration: none;
+       list-style: none;
+       
 
     }
 
     .quick_link li a {
         text-decoration: none;
         color: white;
+
     }
 
     .more_info {
@@ -33,41 +43,95 @@
     .link_info {
         display: flex;
         flex-direction: column;
-       
+
 
     }
 
     .location iframe {
         width: 70%;
-        height: 90%;
+        height: 100%;
         border-radius: 12px;
+        margin-left: 8%;
     }
-    .subcribe{
+
+    .subcribe {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-left: 1em;
     }
-    .infos_link{
+
+    .infos_link {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .thanks_text{
+
+    .thanks_text {
         border: 0.5px solid white;
         width: 90%;
         border-radius: 8px;
     }
-    .thanks_text p{
+
+    .thanks_text p {
         text-align: center;
     }
-    .text_brand .below{
+
+    .text_brand .below {
         border-top: 0.5px solid white;
         width: 60%;
     }
-    hr{
-    border-bottom: 1px solid #ffffff5c;
+
+    hr {
+        border-bottom: 1px solid #84848409;
     }
-    .subcribe_input{
-       width: 70%;
+
+    .sub_input {
+        position: relative;
+        width: 50%;
+        margin-top: 45px;
+    }
+    .sub_text p{
+        width: 70%;
+    }
+    #subcribe_input {
+        width: 100%;
+        padding: 12px 40px 12px 12px;
+        box-sizing: border-box;
+        border: 1px solid #ffffff67;
+        border-radius: 8px;
+        font-size: 16px;
+        background: #000;
+        color: white;
+    }
+    .sub_input i {
+        position: absolute;
+        right: 12px;
+        top: 25%;
+        transform: translateY(-50%);
+        color: white;
+        pointer-events: none;
+    }
+    .social_media{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .social_media p, .quick_link p{
+        font-weight: bold;
+    }
+    .quick_link p{
+        margin-left: 12%;
+    }
+    .social_media i{
+        font-size: 20px;
+
+    }
+    .social_media i:hover{
+        background:rgb(155, 25, 25) ;
+        padding: 8px;
+    }
+    .contact p{
+        font-weight: bold;
     }
 </style>
 
@@ -76,7 +140,7 @@
         <div class="subcribe">
             <div class="sub_text">
                 <h1>Subcribe</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, eum?</p>
+                <p>Stay updated with our latest news, special offers, and promotions! Subscribe to our newsletter and never miss an update.</p>
             </div>
             <div class="sub_input">
                 <input type="text" name="" id="subcribe_input">
@@ -87,16 +151,13 @@
         <div class="more_info">
             <div class="brand_name">
                 <div class="brand_name text">
-                    <!-- <div class="img_brand">
-                        <img src="" alt="">
-                    </div> -->
                     <div class="text_brand">
                         <div class="above">
                             <h3>RSSLVP</h3>
                             <p>Quick Bites, Big Smiles.</p>
                         </div>
                         <div class="below">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, nobis.</p>
+                            <p>Our restaurant serves fresh, tasty fast food made with quality ingredients — quick, delicious, and perfect for people on the go.</p>
                         </div>
                     </div>
 
@@ -105,7 +166,7 @@
             <div class="link_info">
                 <div class="infos_link">
                     <div class="social_media">
-                        <p>Social Media:</p>
+                        <p>Social Media :</p>
                         <div class="fb">
                             <i class="fab fa-facebook-f"></i>
                         </div>
@@ -117,7 +178,7 @@
                         </div>
                     </div>
                     <div class="quick_link">
-                        <p>Quick link:</p>
+                        <p>Quick link :</p>
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Menu</a></li>
@@ -129,17 +190,17 @@
                     </div>
                     <div class="contact">
                         <div class="phone">
-                            <p>Call:</p>
-                            <span>+855 234 77</span>
+                            <p>Call :</p>
+                            <span>+855 977 414 026</span>
                         </div>
                         <div class="email">
-                            <p>Email:</p>
+                            <p>Email :</p>
                             <span>rsslvp@gmail.com</span>
                         </div>
                     </div>
                 </div>
                 <div class="thanks_text">
-                    <p>Thank you for come to our restaurant.</p>
+                    <p>Thank you for coming to our restaurant.</p>
                 </div>
             </div>
             <div class="location">
