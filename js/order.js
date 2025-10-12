@@ -13,45 +13,48 @@ const productContainer = document.getElementById("productContainer");
 let products = Array.from(productContainer.getElementsByClassName("card"));
 
 // --- Filter by number of products ---
-categoryFilter.addEventListener("change", () => {
-  const value = categoryFilter.value;
-  let maxItems = 0;
+if (categoryFilter) {
+  categoryFilter.addEventListener("change", () => {
+    const value = categoryFilter.value;
+    let maxItems = 0;
 
-  if (value === "all") {
-    maxItems = products.length;
-  } else {
-    // Extract number (e.g. "8Products" → 8)
-    maxItems = parseInt(value);
-  }
+    if (value === "all") {
+      maxItems = products.length;
+    } else {
+      maxItems = parseInt(value);
+    }
 
-  products.forEach((card, index) => {
-    card.style.display = index < maxItems ? "block" : "none";
+    products.forEach((card, index) => {
+      card.style.display = index < maxItems ? "block" : "none";
+    });
   });
-});
+}
 
 // --- Sorting function ---
-sortSelect.addEventListener("change", () => {
-  const value = sortSelect.value;
-  let sortedProducts = [...products];
+if (sortSelect) {
+  sortSelect.addEventListener("change", () => {
+    const value = sortSelect.value;
+    let sortedProducts = [...products];
 
-  if (value === "priceAsc") {
-    sortedProducts.sort((a, b) => getPrice(a) - getPrice(b));
-  } else if (value === "priceDesc") {
-    sortedProducts.sort((a, b) => getPrice(b) - getPrice(a));
-  } else if (value === "nameAsc") {
-    sortedProducts.sort((a, b) =>
-      getName(a).localeCompare(getName(b))
-    );
-  } else if (value === "nameDesc") {
-    sortedProducts.sort((a, b) =>
-      getName(b).localeCompare(getName(a))
-    );
-  }
+    if (value === "priceAsc") {
+      sortedProducts.sort((a, b) => getPrice(a) - getPrice(b));
+    } else if (value === "priceDesc") {
+      sortedProducts.sort((a, b) => getPrice(b) - getPrice(a));
+    } else if (value === "nameAsc") {
+      sortedProducts.sort((a, b) =>
+        getName(a).localeCompare(getName(b))
+      );
+    } else if (value === "nameDesc") {
+      sortedProducts.sort((a, b) =>
+        getName(b).localeCompare(getName(a))
+      );
+    }
 
-  // Update the product container
-  productContainer.innerHTML = "";
-  sortedProducts.forEach((card) => productContainer.appendChild(card));
-});
+    // Update container
+    productContainer.innerHTML = "";
+    sortedProducts.forEach((card) => productContainer.appendChild(card));
+  });
+}
 
 // --- Helper Functions ---
 function getPrice(card) {
@@ -67,11 +70,10 @@ function getName(card) {
 document.addEventListener("click", (e) => {
   const dropdown = document.getElementById("moreDropdown");
   const moreButton = e.target.closest("a[href='javascript:void(0)']");
-  if (!moreButton && !dropdown.contains(e.target)) {
+  if (!moreButton && dropdown && !dropdown.contains(e.target)) {
     dropdown.style.display = "none";
   }
 });
-
 
 // ======= SEARCH FUNCTION =======
 const searchInput = document.getElementById("searchInput");
@@ -94,20 +96,17 @@ if (searchInput) {
   });
 }
 
-
-// ===== Pagination with styled buttons =====
+// ======= PAGINATION =======
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll('.card');
   const pagination = document.querySelector(".pagination");
 
-  const itemsPerPage = 8; // show 8 products per page
+  const itemsPerPage = 8;
   const totalPages = Math.ceil(cards.length / itemsPerPage);
   let currentPage = 1;
 
-  // Function to show cards by page
   function showPage(page) {
     cards.forEach(card => (card.style.display = 'none'));
-
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     for (let i = start; i < end && i < cards.length; i++) {
@@ -115,11 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Function to render pagination UI
   function renderPagination() {
-    pagination.innerHTML = ""; // clear old buttons
+    if (!pagination) return;
+    pagination.innerHTML = "";
 
-    // Create numbered buttons
     for (let i = 1; i <= totalPages; i++) {
       const btn = document.createElement("button");
       btn.textContent = i;
@@ -135,11 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
       pagination.appendChild(btn);
     }
 
-    // Add arrow button →
+    // Add next arrow
     const next = document.createElement("button");
     next.innerHTML = "→";
     next.classList.add("page-btn");
-
     next.addEventListener("click", () => {
       if (currentPage < totalPages) {
         currentPage++;
@@ -147,61 +144,29 @@ document.addEventListener("DOMContentLoaded", () => {
         renderPagination();
       }
     });
-
     pagination.appendChild(next);
   }
 
-  // Initialize
   showPage(currentPage);
   renderPagination();
 });
-
-
-// ======= ADD TO CART =======
+// ✅ FINAL ADD TO CART (only this one should remain)
 document.addEventListener("DOMContentLoaded", () => {
-  const addCartButtons = document.querySelectorAll(".add-cart");
+  const addButtons = document.querySelectorAll(".add-cart");
 
-  addCartButtons.forEach(button => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
+  addButtons.forEach(button => {
+    button.addEventListener("click", e => {
+      e.preventDefault();
 
-      const card = button.closest(".card");
-      const name = card.querySelector("h3").textContent;
-      const price = card.querySelector(".new-price").textContent;
+      const card = e.target.closest(".card");
+      if (!card) return;
+
+      const name = card.querySelector("h3").innerText;
+      const priceText = card.querySelector(".new-price").innerText;
       const image = card.querySelector("img").src;
 
-      const product = { name, price, image };
-
-      // Save to localStorage
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push(product);
-      localStorage.setItem("cart", JSON.stringify(cart));
-
-      // Show success alert
-      alert("✅ Added successfully!");
-
-      // Redirect to cart page
-      window.location.href = "cart.html";
-    });
-  });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const addCartButtons = document.querySelectorAll(".add-cart");
-
-  addCartButtons.forEach(button => {
-    button.addEventListener("click", event => {
-      event.preventDefault();
-
-      const card = button.closest(".card");
-      const name = card.querySelector("h3").textContent;
-      const price = card.querySelector(".new-price").textContent.replace('$', '');
-      const image = card.querySelector("img").src;
-
-      // Create product object
-      const product = { name, price, image, quantity: 1 };
+      // Convert price to number
+      const price = parseFloat(priceText.replace(/[^0-9.]/g, "")) || 0;
 
       // Get existing cart from localStorage
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -209,23 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
       // Check if product already exists
       const existing = cart.find(item => item.name === name);
       if (existing) {
-        existing.quantity += 1;
+        existing.quantity++;
       } else {
-        cart.push(product);
+        cart.push({ name, price, image, quantity: 1 });
       }
 
       // Save back to localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
 
-      // Alert success
-      alert("✅ Added successfully!");
+      // Show success alert
+      alert("✅ Added to cart successfully!");
 
       // Redirect to cart page
       window.location.href = "cart.html";
     });
   });
 });
-
-
-
-
