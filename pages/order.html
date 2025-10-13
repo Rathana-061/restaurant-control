@@ -9,7 +9,55 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        header {
+            width: 100%;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background: #333;
+        }
+
+        .menu ul li {
+            position: relative;
+        }
+
+        .menu ul li a {
+            display: block;
+            padding: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu ul li a:hover {
+            background: #444;
+        }
+
+        /* Dropdown menu */
+        .dropdown {
+            display: none;
+            /* hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #333;
+            min-width: 150px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .dropdown a {
+            padding: 0.8rem 1rem;
+        }
+
+        .dropdown a:hover {
+            background: #444;
+        }
+    </style>
 </head>
 
 <body>
@@ -531,18 +579,17 @@
             <a href="#" class="add-cart">🛒 Add to cart</a>
         </div>
     </div>
-
+    
     <div class="pagination">
         <button id="prevPage">Prev</button>
         <span id="pageInfo"> 1</span>
         <button id="nextPage"><i class="ri-arrow-right-line"></i></button>
     </div>
-    <footer class="footer">
+        <footer class="footer">
         <div class="subcribe">
             <div class="sub_text">
                 <h1>Subcribe</h1>
-                <p>Stay updated with our latest news, special offers, and promotions! Subscribe to our newsletter and
-                    never miss an update.</p>
+                <p>Stay updated with our latest news, special offers, and promotions! Subscribe to our newsletter and never miss an update.</p>
             </div>
             <div class="sub_input">
                 <input type="text" name="" id="subcribe_input">
@@ -559,8 +606,7 @@
                             <p>Quick Bites, Big Smiles.</p>
                         </div>
                         <div class="below">
-                            <p>Our restaurant serves fresh, tasty fast food made with quality ingredients — quick,
-                                delicious, and perfect for people on the go.</p>
+                            <p>Our restaurant serves fresh, tasty fast food made with quality ingredients — quick, delicious, and perfect for people on the go.</p>
                         </div>
                     </div>
 
